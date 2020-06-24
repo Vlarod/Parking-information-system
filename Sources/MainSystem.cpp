@@ -144,7 +144,7 @@ bool MainSystem::automaticCoordinateStalls()
 				}
 				catch (const std::exception&)
 				{
-					System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+					System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 					return false;
 				}
 			}
@@ -168,7 +168,7 @@ bool MainSystem::automaticCoordinateStalls()
 				}
 				catch (const std::exception&)
 				{
-					System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+					System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 					return false;
 				}
 			}
@@ -205,7 +205,7 @@ void MainSystem::loadAllTimestamps()
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 	}
 	
 }
@@ -232,7 +232,7 @@ void MainSystem::loadDataForStallSync()
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 	}
 	
 }
@@ -251,7 +251,7 @@ void MainSystem::doUpdateSyncData(std::string sqlTimestamp)
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 	}
 }
 
@@ -272,7 +272,7 @@ oracle::occi::Timestamp MainSystem::loadTimestampFromDatabase(std::string sql)
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return finallTimestamp;
 	}
 }
@@ -308,7 +308,7 @@ std::vector<Park*>* MainSystem::loadParksFromDatabase(std::string sql)
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return nullptr;
 	}
 }
@@ -355,7 +355,7 @@ int MainSystem::loadIntegerFromDatabase(std::string sql)
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return 0;
 	}
 	
@@ -363,8 +363,8 @@ int MainSystem::loadIntegerFromDatabase(std::string sql)
 
 bool MainSystem::connectToDatabase()
 {
-	const std::string userName = "parkovisko";
-	const std::string password = "shdoaf09ernbJHDJFG";
+	const std::string userName = "";
+	const std::string password = "";
 	const std::string connectString = CONNECT;
 	
 	try
@@ -373,7 +373,7 @@ bool MainSystem::connectToDatabase()
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return false;
 	}
 	return true;
@@ -391,7 +391,7 @@ bool MainSystem::doUpdate(std::string sql)
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return false;
 	}
 	
@@ -428,7 +428,7 @@ std::vector<Stall*> *MainSystem::loadStalls(std::string sql)
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return nullptr;
 	}
 }
@@ -485,7 +485,7 @@ std::vector<Stall*>* MainSystem::loadStallsFull(std::string sql, std::vector<Sta
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return nullptr;
 	}
 
@@ -513,7 +513,7 @@ bool MainSystem::loadAutoInfoFromDatabase(std::string sql, std::vector<ParkAutoC
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return false;
 	}
 	return true;
@@ -545,7 +545,7 @@ Stall * MainSystem::loadStallReservationInformations(Stall * stall, std::string 
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return nullptr;
 	}
 }
@@ -585,7 +585,7 @@ bool MainSystem::changeStallType(std::string parkId, std::string stallId, int ne
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return false;
 	}
 }
@@ -614,7 +614,7 @@ bool MainSystem::addStall(std::string x, std::string y, std::string newCapacity,
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return false;
 	}
 }
@@ -640,7 +640,7 @@ bool MainSystem::deleteStall(std::string parkId, std::string stallId, std::strin
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return false;
 	}
 }
@@ -666,7 +666,7 @@ bool MainSystem::addPark(std::string parkId, std::string name, std::string adres
 		}
 		catch (const std::exception&)
 		{
-			System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+			System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 			return false;
 		}
 	return false;
@@ -712,7 +712,7 @@ int MainSystem::addStallsToPark(std::string parkId, std::vector<Stall*>* stalls,
 	}
 	catch (const std::exception&)
 	{
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 		return 0;
 	}
 }
@@ -741,7 +741,7 @@ bool MainSystem::checkExistingData(std::string sql)
 	catch (const std::exception&)
 	{
 		return false;
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 	}
 }
 
@@ -774,7 +774,7 @@ bool MainSystem::checkPlaceForNewStall(std::string parkId, std::string orientati
 	catch (const std::exception&)
 	{
 		return false;
-		System::Windows::Forms::MessageBox::Show("Pripojenie k databáze sa nezdarilo.");
+		System::Windows::Forms::MessageBox::Show("Pripojenie k databÃ¡ze sa nezdarilo.");
 	}
 	
 }
