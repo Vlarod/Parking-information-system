@@ -1,8 +1,7 @@
 #pragma once
 
 //CONNECT 
-//#define CONNECT "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SID = xe)))";
-#define CONNECT "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = obelix.fri.uniza.sk)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = orcl.fri.uniza.sk)))";
+#define CONNECT "";
 
 //SELECTS
 #define LOAD_PARKS_ALL "select * from PR_PARKOVISKO"
